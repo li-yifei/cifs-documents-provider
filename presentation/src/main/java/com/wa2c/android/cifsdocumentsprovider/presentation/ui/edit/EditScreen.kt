@@ -142,7 +142,7 @@ fun EditScreen(
             }
         },
         onClickDelete = { showDeleteDialog.value = true },
-        safeTransferState = if (storageType.value == StorageType.JCIFS_LEGACY) null else viewModel.safeTransfer.collectAsMutableState(),
+        safeTransferState = viewModel.safeTransfer.collectAsMutableState(),
         extensionState = viewModel.extension.collectAsMutableState(),
         isBusy = viewModel.isBusy.collectAsStateWithLifecycle().value,
         connectionResult = viewModel.connectionResult.collectAsStateWithLifecycle().value,

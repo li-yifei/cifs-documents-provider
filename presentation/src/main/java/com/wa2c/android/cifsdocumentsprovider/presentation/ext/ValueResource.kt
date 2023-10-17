@@ -87,5 +87,4 @@ val StorageType.labelRes: Int
     get() = when (this) {
         StorageType.JCIFS -> R.string.enum_storage_jcifsng
         StorageType.SMBJ -> R.string.enum_storage_smbj
-        StorageType.JCIFS_LEGACY ->R.string.enum_storage_jcifs
     }
