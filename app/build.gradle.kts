@@ -43,6 +43,13 @@ android {
             languageVersion.set(JavaLanguageVersion.of(javaVersion.majorVersion))
         }
     }
+    configurations.all {
+        this.resolutionStrategy.eachDependency {
+            if (this.requested.group == "org.bouncycastle") {
+                this.useTarget("org.bouncycastle:bcprov-jdk15to18:1.76")
+            }
+        }
+    }
 }
 
 dependencies {

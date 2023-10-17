@@ -44,7 +44,9 @@ dependencies {
     implementation(project(":data:storage:interfaces"))
 
     implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.jcifs.ng)
+    implementation(libs.jcifs.ng) {
+        exclude(group = "org.bouncycastle",module = "bcprov-jdk15on")
+    }
 
     testImplementation(libs.junit)
 }

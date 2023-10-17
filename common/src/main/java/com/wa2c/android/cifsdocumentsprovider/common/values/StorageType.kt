@@ -14,12 +14,5 @@ enum class StorageType(
 
     companion object {
         val default: StorageType = JCIFS
-
-        /**
-         * Find storage type.
-         */
-        fun findByValue(value: String): StorageType? {
-            return values().firstOrNull { it.value == value }
-        }
     }
 }
